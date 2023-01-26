@@ -722,7 +722,7 @@
         <param index="1" label="target_distance_x_k" units="m">Distance of target position x in meters</param>
         <param index="2" label="target_distance_y_k" units="m">Distance of target position y in meters</param>
         <param index="3" label="target_distance_z_k" units="m">Distance of target position z in meters</param>
-        <param index="4" label="target_aggressive_level">Level of target aggressineves</param>
+        <param index="4" label="target_aggressive_level">Level of target aggressinevess</param>
         <param index="5" >empty</param>
         <param index="6" >empty</param>
         <param index="7" >empty</param>
