@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <mavlink>
   <include>common.xml</include>
+  <include>koustech.cml</include>
   <!-- Vendors -->
   <include>uAvionix.xml</include>
   <include>icarous.xml</include>
