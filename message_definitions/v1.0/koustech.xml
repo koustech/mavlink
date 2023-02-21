@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
 <mavlink>
-  <include>common.xml</include>
   <dialect>2</dialect>
 
   <!-- Note that ArduPilot-specific messages should use the command id range from 150 to 250, to leave plenty of room for growth of common.xml If you prototype a message here, then you should consider if it is general enough to move into common.xml later --> 
@@ -9,7 +8,7 @@
     <!-- KOUSTECH ardupilot commands -->
     <enum name="MAV_CMD">
       <!-- 200 to 214 used by common.xml -->
-      <entry value="151" name="MAV_CMD_NAV_LOCK_K" hasLocation="false" isDestination="false">
+      <entry value="151" name="MAV_CMD_NAV_LOCK_KSTCH" hasLocation="false" isDestination="false">
         <description>Locked Target Parameters</description>
         <param index="1" label="Tager_Distance_x" units="°">Heading of target aircraft</param>
         <param index="2" label="Target_Distance_y" units="m">Distance to target aircraft</param>
