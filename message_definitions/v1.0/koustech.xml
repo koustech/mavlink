@@ -10,11 +10,10 @@
       <!-- 200 to 214 used by common.xml -->
       <entry value="151" name="MAV_CMD_NAV_LOCK_KSTCH" hasLocation="false" isDestination="false">
         <description>Locked Target Parameters</description>
-        <param index="1" label="Tager_Distance_x" units="°">Heading of target aircraft</param>
-        <param index="2" label="Target_Distance_y" units="m">Distance to target aircraft</param>
-        <param index="3" label="Target_Distance_z" units="m">Altitude of target aircraft</param>
-        <!-- Agresiflik seviyesi-->>
-        <param index="4">Empty</param> 
+        <param index="1" label="Target_Distance_x" units="°">-</param>
+        <param index="2" label="Target_Distance_y" units="m">-</param>
+        <param index="3" label="Target_Distance_z" units="m">-</param>
+        <param index="4" label="Target_Turn_Rate" units="px/s">-</param> 
         <param index="5">Empty</param>
         <param index="6">Empty</param>
         <param index="7">Empty</param>
