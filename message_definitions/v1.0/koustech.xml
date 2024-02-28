@@ -13,7 +13,7 @@
         <param index="1" label="Target_Distance_x" units="°">-</param>
         <param index="2" label="Target_Distance_y" units="m">-</param>
         <param index="3" label="Target_Distance_z" units="m">-</param>
-        <param index="4" label="Target_Turn_Rate" units="px/s">-</param> 
+        <param index="4" label="Target_X_Vel" units="m/s">-</param> 
         <param index="5">Empty</param>
         <param index="6">Empty</param>
         <param index="7">Empty</param>
