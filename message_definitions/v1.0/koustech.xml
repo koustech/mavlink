@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<mavlink>
+  <dialect>2</dialect>
+
+  <!-- Note that ArduPilot-specific messages should use the command id range from 150 to 250, to leave plenty of room for growth of common.xml If you prototype a message here, then you should consider if it is general enough to move into common.xml later --> 
+  <!-- This file contains the message definitions created by the koustech team -->
+  <enums>
+    <!-- KOUSTECH ardupilot commands -->
+    <enum name="MAV_CMD">
+      <!-- 200 to 214 used by common.xml -->
+      <entry value="151" name="MAV_CMD_NAV_LOCK_KSTCH" hasLocation="false" isDestination="false">
+        <description>Locked Target Parameters</description>
+        <param index="1" label="Target_Distance_x" units="°">-</param>
+        <param index="2" label="Target_Distance_y" units="m">-</param>
+        <param index="3" label="Target_Distance_z" units="m">-</param>
+        <param index="4" label="Target_X_Vel" units="m/s">-</param> 
+        <param index="5">Empty</param>
+        <param index="6">Empty</param>
+        <param index="7">Empty</param>
+      </entry>
+      <entry value="152" name="MAV_CMD_NAV_TARGET_LOC" hasLocation="false" isDestination="false">
+        <description>Estimated Target Location</description>
+        <param index="1" label="Target_Location_Lat" units="degE7">-</param>
+        <param index="2" label="Target_Location_Lon" units="degE7">-</param>
+        <param index="3" label="Target_Location_Alt" units="mm">-</param>
+        <param index="4">Empty</param>
+        <param index="5">Empty</param>
+        <param index="6">Empty</param>
+        <param index="7">Empty</param>
+      </entry>
+    </enum>
+  </enums>
+  <messages>
+    <message id="4141" name="FULL_TELEMETRY">
+      <description>The full telemetry package that combines ATTITUDE, GLOBAL_POSITION_INT, VFR_HUD, BATTERY_STATUS, WIND_COV, HEARTBEAT, SYSTEM_TIME.</description>
+      <field type="uint64_t" name="time_unix_usec" units="us">Timestamp (UNIX epoch time).</field>
+      <field type="uint32_t" name="time_boot_ms" units="ms">Timestamp (time since system boot).</field>
+      <field type="uint32_t" name="custom_mode">Autopilot-specific flags</field>
+      <field type="uint8_t" name="system_status">System status flag</field>
+      <field type="float" name="roll" units="rad">Roll angle (-pi..+pi)</field>
+      <field type="float" name="pitch" units="rad">Pitch angle (-pi..+pi)</field>
+      <field type="float" name="yaw" units="rad">Yaw angle (-pi..+pi)</field>
+      <field type="int32_t" name="lat" units="degE7">Latitude, expressed</field>
+      <field type="int32_t" name="lon" units="degE7">Longitude, expressed</field>
+      <field type="int32_t" name="alt" units="mm">Altitude (MSL). Note that virtually all GPS modules provide both WGS84 and MSL.</field>
+      <field type="int32_t" name="relative_alt" units="mm">Altitude above home</field>
+      <field type="float" name="airspeed" units="m/s">Vehicle speed in form appropriate for vehicle type. For standard aircraft this is typically calibrated airspeed (CAS) or indicated airspeed (IAS) - either of which can be used by a pilot to estimate stall speed.</field>
+      <field type="float" name="groundspeed" units="m/s">Current ground speed.</field>
+      <field type="uint16_t" name="throttle" units="%">Current throttle setting (0 to 100).</field>
+      <field type="int16_t" name="heading" units="deg">Current heading in compass units (0-360, 0=north).</field>
+    </message>
+  </messages>
+</mavlink>
